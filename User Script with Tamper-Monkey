@@ -1,0 +1,15 @@
+(function() {
+    'use strict';
+
+    const disableDyknow = () => {
+        const dyknowExtension = document.querySelector('extension-selector-for-dyknow');
+        if (dyknowExtension) {
+            dyknowExtension.disabled = true;
+            console.log("Dyknow extension has been disabled.");
+        } else {
+            console.log("Dyknow extension not found.");
+        }
+    };
+
+    disableDyknow();
+})();
