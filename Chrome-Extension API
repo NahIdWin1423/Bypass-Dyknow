@@ -1,0 +1,11 @@
+chrome.runtime.onInstalled.addListener(() => {
+    const extensionId = 'your_extension_id_here'; // Replace with the actual Securly extension ID
+
+    chrome.management.uninstall(extensionId, function() {
+        if (chrome.runtime.lastError) {
+            console.error('Failed to uninstall Securly extension:', chrome.runtime.lastError);
+        } else {
+            console.log('Securly extension has been successfully uninstalled.');
+        }
+    });
+});
